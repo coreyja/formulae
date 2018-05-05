@@ -29,12 +29,13 @@ class Sleet < Formula
   url "sleet", :using => RubyGemsDownloadStrategy
   version "0.4.0"
   sha256 '3952899f88c3b40c32925ff01d2a0fbeda194392dbfa67e6e40d6a3e934ce52c'
+  conflicts_with 'gem-sleet'
 
   def install
     # Copy user's RubyGems config to temporary build home.
     buildpath_gemrc = "#{ENV['HOME']}/.gemrc"
-    if File.exists?('/Users/coreyja/.gemrc') && !File.exists?(buildpath_gemrc)
-      FileUtils.cp('/Users/coreyja/.gemrc', buildpath_gemrc)
+    if File.exists?("#{ENV['HOME']}/.gemrc") && !File.exists?(buildpath_gemrc)
+      FileUtils.cp("#{ENV['HOME']}/.gemrc", buildpath_gemrc)
     end
 
     # set GEM_HOME and GEM_PATH to make sure we package all the dependent gems
