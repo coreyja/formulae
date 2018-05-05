@@ -25,7 +25,7 @@ class RubyGemsDownloadStrategy < AbstractDownloadStrategy
   end
 end
 
-class GemSleet < Formula
+class Sleet < Formula
   url "sleet", :using => RubyGemsDownloadStrategy
   version "0.4.0"
 
