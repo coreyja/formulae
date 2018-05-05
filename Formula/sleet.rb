@@ -3,7 +3,7 @@
 require 'formula'
 require 'fileutils'
 
-BREWGEM_RUBYBINDIR = '/usr/bin'
+BREWGEM_RUBYBINDIR = '/usr/local/bin'
 BREWGEM_GEM_PATH = "#{BREWGEM_RUBYBINDIR}/gem"
 BREWGEM_RUBY_PATH = "#{BREWGEM_RUBYBINDIR}/ruby"
 
