@@ -29,6 +29,8 @@ class Sleet < Formula
   url "sleet", :using => RubyGemsDownloadStrategy
   version "0.4.0"
   sha256 '3952899f88c3b40c32925ff01d2a0fbeda194392dbfa67e6e40d6a3e934ce52c'
+  depends_on 'ruby'
+  depends_on 'cmake' => :build
 
   def install
     # Copy user's RubyGems config to temporary build home.
